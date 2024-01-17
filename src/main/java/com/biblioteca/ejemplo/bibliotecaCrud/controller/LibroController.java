@@ -53,7 +53,7 @@ public class LibroController {
         return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
     }
 
-    @PostMapping("/{libroId}/{autorId}")
+    @PutMapping("/{libroId}/{autorId}")
     public ResponseEntity<List<AutorLibroEntity>> addAutor(@PathVariable Long libroId,@PathVariable Long autorId){
         return new ResponseEntity<List<AutorLibroEntity>>(libroService.addAutor(autorId,libroId), HttpStatus.OK);
     }
